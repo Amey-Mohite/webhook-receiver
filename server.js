@@ -185,7 +185,6 @@ const app = express();
 
    // Define routes
   app.post('/openbanking', apiKeyMiddleware, (req, res) => {
-      console.log('Received open banking webhook:', req.body);
       const jsonData = req.body;
       const containerName = 'data';
       const blobName = `example-blob-${Date.now()}.json`;
